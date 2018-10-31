@@ -1,0 +1,8 @@
+prefix=/home/gyl/my-code/auto-car-gazebo/install
+
+Name: car_demo
+Description: Description of car_demo
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/gyl/my-code/auto-car-gazebo/install/lib 
+Requires: gazebo_ros prius_msgs

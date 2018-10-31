@@ -1,0 +1,2 @@
+car_demo:prius_description:prius_msgs
+-DCATKIN_DEVEL_PREFIX=/home/gyl/my-code/auto-car-gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/gyl/my-code/auto-car-gazebo/install -G Unix Makefiles

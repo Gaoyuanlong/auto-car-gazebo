@@ -1,0 +1,8 @@
+prefix=/home/gyl/my-code/auto-car-gazebo/install
+
+Name: prius_msgs
+Description: Description of prius_msgs
+Version: 0.0.1
+Cflags: -I/home/gyl/my-code/auto-car-gazebo/install/include
+Libs: -L/home/gyl/my-code/auto-car-gazebo/install/lib 
+Requires: message_runtime std_msgs
