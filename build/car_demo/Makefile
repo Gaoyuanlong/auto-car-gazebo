@@ -286,6 +286,21 @@ dynamic_reconfigure_generate_messages_nodejs/fast:
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
+car_demo/CMakeFiles/PriusHybridPlugin.dir/rule:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 car_demo/CMakeFiles/PriusHybridPlugin.dir/rule
+.PHONY : car_demo/CMakeFiles/PriusHybridPlugin.dir/rule
+
+# Convenience name for target.
+PriusHybridPlugin: car_demo/CMakeFiles/PriusHybridPlugin.dir/rule
+
+.PHONY : PriusHybridPlugin
+
+# fast build rule for target.
+PriusHybridPlugin/fast:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/PriusHybridPlugin.dir/build.make car_demo/CMakeFiles/PriusHybridPlugin.dir/build
+.PHONY : PriusHybridPlugin/fast
+
+# Convenience name for target.
 car_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
 	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 car_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : car_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
@@ -856,6 +871,21 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
+car_demo/CMakeFiles/gazebo_ros_block_laser.dir/rule:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 car_demo/CMakeFiles/gazebo_ros_block_laser.dir/rule
+.PHONY : car_demo/CMakeFiles/gazebo_ros_block_laser.dir/rule
+
+# Convenience name for target.
+gazebo_ros_block_laser: car_demo/CMakeFiles/gazebo_ros_block_laser.dir/rule
+
+.PHONY : gazebo_ros_block_laser
+
+# fast build rule for target.
+gazebo_ros_block_laser/fast:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build.make car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build
+.PHONY : gazebo_ros_block_laser/fast
+
+# Convenience name for target.
 car_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
 	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f CMakeFiles/Makefile2 car_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : car_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
@@ -1095,6 +1125,60 @@ tf2_msgs_generate_messages_py/fast:
 	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make car_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
+plugins/PriusHybridPlugin.o: plugins/PriusHybridPlugin.cc.o
+
+.PHONY : plugins/PriusHybridPlugin.o
+
+# target to build an object file
+plugins/PriusHybridPlugin.cc.o:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/PriusHybridPlugin.dir/build.make car_demo/CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.o
+.PHONY : plugins/PriusHybridPlugin.cc.o
+
+plugins/PriusHybridPlugin.i: plugins/PriusHybridPlugin.cc.i
+
+.PHONY : plugins/PriusHybridPlugin.i
+
+# target to preprocess a source file
+plugins/PriusHybridPlugin.cc.i:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/PriusHybridPlugin.dir/build.make car_demo/CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.i
+.PHONY : plugins/PriusHybridPlugin.cc.i
+
+plugins/PriusHybridPlugin.s: plugins/PriusHybridPlugin.cc.s
+
+.PHONY : plugins/PriusHybridPlugin.s
+
+# target to generate assembly for a file
+plugins/PriusHybridPlugin.cc.s:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/PriusHybridPlugin.dir/build.make car_demo/CMakeFiles/PriusHybridPlugin.dir/plugins/PriusHybridPlugin.cc.s
+.PHONY : plugins/PriusHybridPlugin.cc.s
+
+plugins/gazebo_ros_block_laser.o: plugins/gazebo_ros_block_laser.cpp.o
+
+.PHONY : plugins/gazebo_ros_block_laser.o
+
+# target to build an object file
+plugins/gazebo_ros_block_laser.cpp.o:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build.make car_demo/CMakeFiles/gazebo_ros_block_laser.dir/plugins/gazebo_ros_block_laser.cpp.o
+.PHONY : plugins/gazebo_ros_block_laser.cpp.o
+
+plugins/gazebo_ros_block_laser.i: plugins/gazebo_ros_block_laser.cpp.i
+
+.PHONY : plugins/gazebo_ros_block_laser.i
+
+# target to preprocess a source file
+plugins/gazebo_ros_block_laser.cpp.i:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build.make car_demo/CMakeFiles/gazebo_ros_block_laser.dir/plugins/gazebo_ros_block_laser.cpp.i
+.PHONY : plugins/gazebo_ros_block_laser.cpp.i
+
+plugins/gazebo_ros_block_laser.s: plugins/gazebo_ros_block_laser.cpp.s
+
+.PHONY : plugins/gazebo_ros_block_laser.s
+
+# target to generate assembly for a file
+plugins/gazebo_ros_block_laser.cpp.s:
+	cd /home/gyl/my-code/auto-car-gazebo/build && $(MAKE) -f car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build.make car_demo/CMakeFiles/gazebo_ros_block_laser.dir/plugins/gazebo_ros_block_laser.cpp.s
+.PHONY : plugins/gazebo_ros_block_laser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1113,6 +1197,7 @@ help:
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... PriusHybridPlugin"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
@@ -1154,6 +1239,7 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+	@echo "... gazebo_ros_block_laser"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_lisp"
@@ -1170,6 +1256,12 @@ help:
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... plugins/PriusHybridPlugin.o"
+	@echo "... plugins/PriusHybridPlugin.i"
+	@echo "... plugins/PriusHybridPlugin.s"
+	@echo "... plugins/gazebo_ros_block_laser.o"
+	@echo "... plugins/gazebo_ros_block_laser.i"
+	@echo "... plugins/gazebo_ros_block_laser.s"
 .PHONY : help
 
 

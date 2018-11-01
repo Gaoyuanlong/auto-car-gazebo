@@ -621,6 +621,19 @@ dynamic_reconfigure_generate_messages_nodejs/fast:
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named PriusHybridPlugin
+
+# Build rule for target.
+PriusHybridPlugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PriusHybridPlugin
+.PHONY : PriusHybridPlugin
+
+# fast build rule for target.
+PriusHybridPlugin/fast:
+	$(MAKE) -f car_demo/CMakeFiles/PriusHybridPlugin.dir/build.make car_demo/CMakeFiles/PriusHybridPlugin.dir/build
+.PHONY : PriusHybridPlugin/fast
+
+#=============================================================================
 # Target rules for targets named dynamic_reconfigure_generate_messages_lisp
 
 # Build rule for target.
@@ -1115,6 +1128,19 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named gazebo_ros_block_laser
+
+# Build rule for target.
+gazebo_ros_block_laser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_block_laser
+.PHONY : gazebo_ros_block_laser
+
+# fast build rule for target.
+gazebo_ros_block_laser/fast:
+	$(MAKE) -f car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build.make car_demo/CMakeFiles/gazebo_ros_block_laser.dir/build
+.PHONY : gazebo_ros_block_laser/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1370,6 +1396,7 @@ help:
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... PriusHybridPlugin"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
@@ -1408,6 +1435,7 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+	@echo "... gazebo_ros_block_laser"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_lisp"
