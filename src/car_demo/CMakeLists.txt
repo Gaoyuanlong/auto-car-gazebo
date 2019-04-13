@@ -7,13 +7,16 @@ set (PRIUSCUP_PATCH_VERSION 0)
 set (PRIUSCUP_VERSION_FULL ${PRIUSCUP_MAJOR_VERSION}.${PRIUSCUP_MINOR_VERSION}.${PRIUSCUP_PATCH_VERSION})
 set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
 
+# $(Q)/usr/bin/protoc --proto_path=$(PROTO_SRC_DIR) --cpp_out=$(PROTO_BUILD_DIR) $&lt;
+# $(Q)/usr/bin/protoc --proto_path=$(PROTO_SRC_DIR) --python_out=$(PY_PROTO_BUILD_DIR) $&lt;
+
 find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   prius_msgs
 )
 
 find_package(gazebo 8 REQUIRED)
-# find_package(ignition-msgs0 REQUIRED)
+find_package(ignition-msgs0 REQUIRED)
 
 catkin_package(
  # INCLUDE_DIRS include
@@ -24,22 +27,22 @@ catkin_package(
 
 include_directories(include ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS} ${SDFormat_INCLUDE_DIRS})
 
-# add_library(PriusHybridPlugin SHARED plugins/PriusHybridPlugin.cc)
-# target_link_libraries(PriusHybridPlugin ${GAZEBO_LIBRARIES} ${IGNITION-MSGS_LIBRARIES})
-# add_dependencies(PriusHybridPlugin ${catkin_EXPORTED_TARGETS})
+add_library(PriusHybridPlugin SHARED plugins/PriusHybridPlugin.cc)
+target_link_libraries(PriusHybridPlugin ${GAZEBO_LIBRARIES} ${IGNITION-MSGS_LIBRARIES})
+add_dependencies(PriusHybridPlugin ${catkin_EXPORTED_TARGETS})
 
-# add_library(gazebo_ros_block_laser SHARED plugins/gazebo_ros_block_laser.cpp)
-# target_link_libraries(gazebo_ros_block_laser ${GAZEBO_LIBRARIES} ${IGNITION-MSGS_LIBRARIES})
-# add_dependencies(gazebo_ros_block_laser ${catkin_EXPORTED_TARGETS})
+add_library(gazebo_ros_block_laser SHARED plugins/gazebo_ros_block_laser.cpp)
+target_link_libraries(gazebo_ros_block_laser ${GAZEBO_LIBRARIES} ${IGNITION-MSGS_LIBRARIES})
+add_dependencies(gazebo_ros_block_laser ${catkin_EXPORTED_TARGETS})
 
-# catkin_install_python(PROGRAMS nodes/joystick_translator
-#                       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+catkin_install_python(PROGRAMS nodes/joystick_translator
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-# install(TARGETS PriusHybridPlugin gazebo_ros_block_laser
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS PriusHybridPlugin gazebo_ros_block_laser
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
-# install(DIRECTORY models DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
-# install(DIRECTORY worlds DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY models DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY worlds DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
